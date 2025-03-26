@@ -1,0 +1,14 @@
+comments:
+  allowedFields: ["name", "message"]
+  requiredFields: ["name", "message"]
+  format: "yaml"
+  path: "comments/{@timestamp}"
+  moderation: false
+  branch: "main"
+  commitMessage: "Lisätty viesti käyttäjältä {@name}"
+  filename: "{@timestamp}"
+  generatedFields:
+    date:
+      type: "date"
+      options:
+        format: "iso8601"
